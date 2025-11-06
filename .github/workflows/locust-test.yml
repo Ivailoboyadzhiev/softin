@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Locust load test (headless)
         run: |
-          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host https://your-target-url.com
+          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host example.org
 
       - name: Upload Locust HTML report
         run: |
