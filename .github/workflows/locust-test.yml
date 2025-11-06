@@ -27,11 +27,11 @@ jobs:
 
       - name: Run Locust load test (headless)
         run: |
-          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host example.org
+          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host https://example.org
 
       - name: Upload Locust HTML report
         run: |
-          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host example.org --html locust-report.html
+          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host https://example.org --html locust-report.html
         continue-on-error: true
 
       - name: Save Locust report as artifact
