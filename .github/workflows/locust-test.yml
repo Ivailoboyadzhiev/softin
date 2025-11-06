@@ -31,7 +31,7 @@ jobs:
 
       - name: Upload Locust HTML report
         run: |
-          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host https://your-target-url.com --html locust-report.html
+          locust -f locustfile.py --headless -u 10 -r 2 -t 1m --host example.org --html locust-report.html
         continue-on-error: true
 
       - name: Save Locust report as artifact
